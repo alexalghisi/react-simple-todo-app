@@ -50,6 +50,11 @@ return (
 <input
  value={text}
  onChange={e => setText(e.target.value)} 
+ onKeyDown={(e) => {
+    if (e.key === "Enter")
+        addTask(text);
+        console.log("123");
+    }}
  />
 <button onClick={() => addTask(text)}>Add</button>
  </div>
